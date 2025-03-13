@@ -183,6 +183,12 @@ keybinds {
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
+    shared {
+      bind "Ctrl Shift t" { NewTab; SwitchToMode "Normal"; }
+      bind "Ctrl Shift q" { CloseTab; SwitchToMode "Normal"; }
+      bind "Ctrl Shift Left" { MoveFocusOrTab "Left"; SwitchToMode "Normal"; }
+      bind "Ctrl Shift Right" { MoveFocusOrTab "Right"; SwitchToMode "Normal"; }
+    }
 }
 
 plugins {
